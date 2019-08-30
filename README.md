@@ -34,6 +34,7 @@ class Demo extends React.Component {
       <View>
         <Text onPress={this.showActionSheet}>Open ActionSheet</Text>
         <ActionSheet
+          useRipple={true}
           ref={o => this.ActionSheet = o}
           title={'Which one do you like ?'}
           options={['Apple', 'Banana', 'cancel']}
@@ -160,6 +161,12 @@ https://github.com/arjan-zuidema/react-native-actionsheet-ex/blob/master/lib/opt
         <td></td>
         <td>PropTypes.func</td>
         <td>(index) => {}</td>
+    </tr>
+    <tr>
+        <td>useRipple</td>
+        <td></td>
+        <td>PropTypes.bool</td>
+        <td>false</td>
     </tr>
     <tr>
         <td>styles</td>
