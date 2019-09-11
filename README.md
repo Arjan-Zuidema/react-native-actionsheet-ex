@@ -27,12 +27,14 @@ import ActionSheet from 'react-native-actionsheet-ex'
 
 class Demo extends React.Component {
   showActionSheet = () => {
-    this.ActionSheet.show()
+    this.ActionSheet.show({
+      anchor: React.findNodeHandle(this.textRef);
+    });
   }
   render() {
     return (
       <View>
-        <Text onPress={this.showActionSheet}>Open ActionSheet</Text>
+        <Text ref={ref => this.textRef = ref} onPress={this.showActionSheet}>Open ActionSheet</Text>
         <ActionSheet
           ref={o => this.ActionSheet = o}
           title={'Which one do you like ?'}
