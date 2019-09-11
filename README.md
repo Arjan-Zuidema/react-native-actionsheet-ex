@@ -1,5 +1,5 @@
-# react-native-actionsheet
-Cross platform ActionSheet. This component implements a custom ActionSheet  and provides the same way to drawing it on the defferent platforms(iOS and Android). Actually, In order to keep the best effect, it still uses the ActionSheetIOS on iOS.
+# react-native-actionsheet-ex
+Cross platform ActionSheet. This component implements a custom ActionSheet  and provides the same way to drawing it on the different platforms (iOS and Android). Actually, In order to keep the best effect, it still uses the ActionSheetIOS on iOS.
 
 <table>
   <tbody>
@@ -36,6 +36,7 @@ class Demo extends React.Component {
       <View>
         <Text ref={ref => this.textRef = ref} onPress={this.showActionSheet}>Open ActionSheet</Text>
         <ActionSheet
+          useRipple={true}
           ref={o => this.ActionSheet = o}
           title={'Which one do you like ?'}
           options={['Apple', 'Banana', 'cancel']}
@@ -162,6 +163,12 @@ https://github.com/arjan-zuidema/react-native-actionsheet-ex/blob/master/lib/opt
         <td></td>
         <td>PropTypes.func</td>
         <td>(index) => {}</td>
+    </tr>
+    <tr>
+        <td>useRipple</td>
+        <td></td>
+        <td>PropTypes.bool</td>
+        <td>false</td>
     </tr>
     <tr>
         <td>styles</td>
