@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install depedencies
+      run: yarn install
+    - name: Test
+      run: yarn test
